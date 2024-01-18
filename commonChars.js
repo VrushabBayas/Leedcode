@@ -8,7 +8,6 @@ function commonChars(words) {
     let word = [...words[i]];
     result = result.filter((char) => {
       let index = word.indexOf(char);
-      console.log("index: ", index);
       if (index !== -1) {
         word[index] = null;
         return true;
@@ -25,9 +24,9 @@ console.log(commonChars([])); // Expected output: []
 
 console.log(commonChars(["hello", "world"])); // Expected output: ['l', 'o']
 
-console.log(commonChars(["apple", "banana", "cherry"])); // Expected output: ['a']
+console.log(commonChars(["apple", "banana", "cherry"])); // Expected output: []
 
-console.log(commonChars(["programming", "problem", "solving"])); // Expected output: ['o', 'm']
+console.log(commonChars(["programming", "problem", "solving"])); // Expected output: ['o']
 
 console.log(commonChars(["abc", "def", "ghi"])); // Expected output: []
 
